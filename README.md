@@ -14,7 +14,14 @@ The result will be published in the project wiki.
 
 1. Serving static files
 The web server will serve static files under staticfiles directory.
-The files size of these files are selected based on some real world senarios. Like the home page html from facebook.com is 101KB, a periodical rpc call from facebook web page is generally from 30B to 300B.
+The files size of these files are selected based on some real world senarios. 
+Html file:
+home page html from facebook.com is 101KB, 
+RPC request:
+A periodical rpc call from facebook web page is generally from 30B to 500B. 
+RPC calls by facebook messenger is from 1.5k to 2.6k.
+RPC call for story update is about 22.6k.
+Pictures:
 
 A more clever way would be dynamically generate the files by configuration, this would be the next step.
 
