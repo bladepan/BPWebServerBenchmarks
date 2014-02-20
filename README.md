@@ -12,6 +12,14 @@ Httperf, a command line program originally developed at HP Labs
 
 The result will be published in the project wiki.
 
+The following web servers will be benchmarked
+1. Nginx
+2. Apache httpd
+3. Go Http Server -- Go build-in http server
+4. Node.js Http Server -- Node.js buid-in http server
+
+You need install necessary parts to run the benchmarks.
+
 1. Serving static files
 The web server will serve static files under staticfiles directory.
 The files size of these files are selected based on some real world senarios. 
