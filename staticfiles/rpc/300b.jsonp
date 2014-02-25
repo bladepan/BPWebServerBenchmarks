@@ -1,1 +1,0 @@
-for (;;); {"t":"msg","seq":3388,"ms":[{"overlay":{"582979190":{"a":2,"ol":0,"s":"push"}},"type":"buddylist_overlay"},{"user_id":582979190,"listeners":[{"app_id":350685531728,"session_id":-2597512776290247521,"ip_address":"10.200.5.61","port":8872,"app_foreground":false,"device_foreground":false,"last_active_time_ms":-1}],"source":"buddylist_overlay","type":"mqtt_listener_info"}]}
