@@ -1,7 +1,7 @@
 #!/bin/bash
 i_scriptDir=$(cd "$(dirname "$0")"; pwd)
 i_baseDir=$(cd $i_scriptDir/..; pwd)
-cd i_baseDir
+cd $i_baseDir
 
 i_static_dir=$i_baseDir/staticfiles
 mkdir -p $i_static_dir
