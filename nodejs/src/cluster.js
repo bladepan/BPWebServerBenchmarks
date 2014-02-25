@@ -1,10 +1,17 @@
 var cluster = require('cluster');
-var http = require('http');
-var numCPUs = require('os').cpus().length;
+
 
 if (cluster.isMaster) {
+  
+  var workerNum = require('os').cpus().length;
+  if (process.argv.length>=5) {
+    workerNum = parseInt(process.argv[4]);
+  }
+
+  console.log('start '+workerNum+' workers!');
+
   // Fork workers.
-  for (var i = 0; i < numCPUs; i++) {
+  for (var i = 0; i < workerNum; i++) {
     cluster.fork();
   }
 

@@ -7,4 +7,4 @@ source $i_baseDir/../bin/parameter.sh
 cd $i_baseDir
 
 
-node src/cluster.js $i_portnum $i_staticdir
+node src/cluster.js $i_portnum $i_staticdir $i_workers

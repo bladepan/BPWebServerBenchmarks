@@ -8,6 +8,7 @@ i_rootDir=$(cd $i_scriptDir/../..; pwd)
 
 i_portnum=8964
 i_staticdir="$i_rootDir/staticfiles"
+
 if [[ "X$1" != "X" ]]; then
     i_portnum=$1
 fi
