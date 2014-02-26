@@ -6,6 +6,8 @@ cd $i_baseDir
 i_static_dir=$i_baseDir/staticfiles
 mkdir -p $i_static_dir
 
+cp template/* $i_static_dir
+
 dd if=/dev/zero of=$i_static_dir/101k.html bs=1k count=101
 
 dd if=/dev/zero of=$i_static_dir/30b.json bs=1 count=30
@@ -18,6 +20,4 @@ dd if=/dev/zero of=$i_static_dir/2.5k.json bs=100 count=25
 dd if=/dev/zero of=$i_static_dir/26k.json bs=1k count=26
 
 
-
-
-
+nginx/bin/prepareConfig.sh

@@ -1,2 +1,5 @@
 
 staticfiles
+nginx/conf/nginx.conf
+
+nginx/conf/nginx.conf-e
