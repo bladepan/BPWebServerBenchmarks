@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Bpwebserverbenchmarks : web server benchmark scripts, configurations" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Bpwebserverbenchmarks</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bladepan/BPWebServerBenchmarks">View on GitHub</a>
+
+          <h1 id="project_title">Bpwebserverbenchmarks</h1>
+          <h2 id="project_tagline">web server benchmark scripts, configurations</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bladepan/BPWebServerBenchmarks/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bladepan/BPWebServerBenchmarks/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="bpwebserverbenchmarks" class="anchor" href="#bpwebserverbenchmarks"><span class="octicon octicon-link"></span></a>BPWebServerBenchmarks</h1>
+
+<p>web server benchmark scripts, configurations and source code </p>
+
+<p>Just getting started....</p>
+
+<p>Benchmark tools:
+ApacheBench (or ab), a command line program bundled with Apache HTTP Server
+Httperf, a command line program originally developed at HP Labs</p>
+
+<p>The result will be published in the project wiki.</p>
+
+<p>The following web servers will be benchmarked
+1. Nginx
+2. Apache httpd
+3. Go Http Server -- Go build-in http server
+4. Node.js Http Server -- Node.js buid-in http server</p>
+
+<p>You need install necessary parts to run the benchmarks.</p>
+
+<ol>
+<li>Serving static files
+The web server will serve static files under staticfiles directory.
+The files size of these files are selected based on some real world senarios. 
+Html file:
+home page html from facebook.com is 101KB, 
+RPC request:
+A periodical rpc call from facebook web page is generally from 30B to 500B. 
+RPC calls by facebook messenger is from 1.5k to 2.6k.
+RPC call for story update is about 22.6k.
+Pictures:</li>
+</ol><p>A more clever way would be dynamically generate the files by configuration, this would be the next step.</p>
+
+<ol>
+<li>Reverse Proxy</li>
+</ol><p>reference
+<a href="http://en.wikipedia.org/wiki/Web_server_benchmarking">http://en.wikipedia.org/wiki/Web_server_benchmarking</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Bpwebserverbenchmarks maintained by <a href="https://github.com/bladepan">bladepan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
