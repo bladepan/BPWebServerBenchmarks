@@ -6,6 +6,10 @@ var fs = require('fs');
 var portNum = parseInt(process.argv[2]);
 var dir = process.argv[3];
 
+var errorHandler=function(err){
+        console.log(err);
+        console.log(err.message);
+};
 
 http.createServer(function(req, res) {
     var uri = url.parse(req.url).pathname;
@@ -25,6 +29,9 @@ http.createServer(function(req, res) {
             var ret = res.write(buf);
             if (ret) {
                 readBuf.shift();
+            }else{
+                readBuf.shift();
+                res.once('drain', writeResponse);
             }
         }else if (finish) {
             res.end();
@@ -44,18 +51,8 @@ http.createServer(function(req, res) {
         writeResponse();
     });
 
-    readable.on('error',function(err){
-        console.log(err);
-        console.log(err.message);
-    });
-
-
-    res.on('drain', writeResponse);
-
-    res.on('error',function(err){
-        console.log(err);
-        console.log(err.message);
-    });
+    readable.on('error',errorHandler);
+    res.on('error',errorHandler);
 
     //The callback is given the three arguments, (err, bytesRead, buffer).
 }).listen(portNum, '127.0.0.1');
