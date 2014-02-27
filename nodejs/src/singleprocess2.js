@@ -29,6 +29,9 @@ http.createServer(function(req, res) {
             var ret = res.write(buf);
             if (ret) {
                 readBuf.shift();
+                if (readBuf.length==0 && finish) {
+                    res.end();
+                }
             }else{
                 readBuf.shift();
                 res.once('drain', writeResponse);
