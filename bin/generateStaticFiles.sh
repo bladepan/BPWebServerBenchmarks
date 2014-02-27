@@ -20,4 +20,4 @@ dd if=/dev/zero of=$i_static_dir/2.5k.json bs=100 count=25
 dd if=/dev/zero of=$i_static_dir/26k.json bs=1k count=26
 
 
-nginx/bin/prepareConfig.sh
+#nginx/bin/prepareConfig.sh
