@@ -10,7 +10,7 @@ cd $i_baseDir
 cp conf/nginx.conf.tmpl conf/nginx.conf
 
 if [[ "X$i_workers" == "X" ]]; then
-    i_workers = 1
+    i_workers=1
 fi
 
 #cat conf/nginx.conf.tmpl
