@@ -11,5 +11,5 @@ if [[ "X$i_workers" != "X" ]]; then
     export GOMAXPROCS=$i_workers
 fi
 
-$i_baseDir/go/gowebserver
+$i_baseDir/bin/gowebserver $i_portnum $i_staticdir
 
