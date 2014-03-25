@@ -5,6 +5,20 @@ web server benchmark scripts, configurations and source code
 
 Just getting started....
 
+Installing nginx
+You may want to compile nginx to use local directories, configure it like this (you need to download pcre and zlib source code)
+
+./configure --prefix=/home/pan/nginx  --pid-path=/home/pan/nginx/logs/nginx.pid --lock-path==/home/pan/nginx/logs/nginx.lock --with-pcre=/home/pan/Downloads/pcre-8.34 --with-zlib=/home/pan/Downloads/zlib-1.2.8
+
+
+You may also need to change the max files a process can open, in ubuntu, it is adding two lines in  /etc/security/limits.conf, like this
+
+pan   hard   nofile   65535
+
+pan   soft   nofile   65535
+
+You can verify the change by : ulimit -a
+
 
 Benchmark tools:
 ApacheBench (or ab), a command line program bundled with Apache HTTP Server
@@ -31,7 +45,6 @@ RPC calls by facebook messenger is from 1.5k to 2.6k.
 RPC call for story update is about 22.6k.
 Pictures:
 
-A more clever way would be dynamically generate the files by configuration, this would be the next step.
 
 
 2. Reverse Proxy

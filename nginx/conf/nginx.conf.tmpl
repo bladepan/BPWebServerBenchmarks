@@ -2,15 +2,17 @@
 #user  nobody;
 worker_processes  xxworkersxx;
 
-error_log  xxlogdirxx/error.log;
-error_log  xxlogdirxx/error.log  notice;
-error_log  xxlogdirxx/error.log  info;
+# these things are better specified during compilation
+#error_log  xxlogdirxx/error.log;
+#error_log  xxlogdirxx/error.log  notice;
+#error_log  xxlogdirxx/error.log  info;
 
-pid        xxlogdirxx/nginx.pid;
+#pid        xxlogdirxx/nginx.pid;
 
 
 events {
-    worker_connections  1024;
+    # to test 10k connections
+    worker_connections  20480;
 }
 
 
@@ -27,7 +29,7 @@ http {
     #                  '$status $body_bytes_sent "$http_referer" '
     #                  '"$http_user_agent" "$http_x_forwarded_for"';
 
-    access_log  xxlogdirxx/access.log  main;
+    #access_log  xxlogdirxx/access.log  main;
 
     sendfile        on;
     #tcp_nopush     on;
@@ -43,7 +45,7 @@ http {
 
         #charset koi8-r;
 
-        access_log  xxlogdirxx/host.access.log  main;
+        #access_log  xxlogdirxx/host.access.log  main;
 
         location / {
             root   xxrootxx;
