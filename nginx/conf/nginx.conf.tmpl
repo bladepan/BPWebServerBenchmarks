@@ -2,11 +2,11 @@
 #user  nobody;
 worker_processes  xxworkersxx;
 
-#error_log  logs/error.log;
-#error_log  logs/error.log  notice;
-#error_log  logs/error.log  info;
+error_log  xxlogdirxx/error.log;
+error_log  xxlogdirxx/error.log  notice;
+error_log  xxlogdirxx/error.log  info;
 
-#pid        logs/nginx.pid;
+pid        xxlogdirxx/nginx.pid;
 
 
 events {
@@ -27,7 +27,7 @@ http {
     #                  '$status $body_bytes_sent "$http_referer" '
     #                  '"$http_user_agent" "$http_x_forwarded_for"';
 
-    #access_log  logs/access.log  main;
+    access_log  xxlogdirxx/access.log  main;
 
     sendfile        on;
     #tcp_nopush     on;
@@ -43,7 +43,7 @@ http {
 
         #charset koi8-r;
 
-        #access_log  logs/host.access.log  main;
+        access_log  xxlogdirxx/host.access.log  main;
 
         location / {
             root   xxrootxx;

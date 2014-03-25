@@ -23,6 +23,10 @@ sed -i  -e "s/xxrootxx/$i_staticdir/g" conf/nginx.conf
 
 sed -i  -e "s/xxworkersxx/$i_workers/g" conf/nginx.conf
 
+i_logdir="${i_logdir//\//\\/}"
+
+sed -i  -e "s/xxlogdirxx/$i_logdir/g" conf/nginx.conf
+
 
 
 

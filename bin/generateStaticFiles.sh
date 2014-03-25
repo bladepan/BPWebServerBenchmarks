@@ -6,6 +6,9 @@ cd $i_baseDir
 i_static_dir=$i_baseDir/staticfiles
 mkdir -p $i_static_dir
 
+i_logdir="$i_baseDir/logs"
+mkdir -p $i_logdir
+
 cp template/* $i_static_dir
 
 dd if=/dev/zero of=$i_static_dir/101k.html bs=1k count=101
@@ -25,6 +28,7 @@ dd if=/dev/zero of=$i_static_dir/100k.json bs=1k count=100
 dd if=/dev/zero of=$i_static_dir/200k.json bs=1k count=200
 
 dd if=/dev/zero of=$i_static_dir/1m.json bs=1k count=1024
+dd if=/dev/zero of=$i_static_dir/3m.json bs=1k count=$((3*1024))
 
 dd if=/dev/zero of=$i_static_dir/26k.json bs=1k count=26
 
