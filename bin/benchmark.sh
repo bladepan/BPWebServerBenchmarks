@@ -31,4 +31,4 @@ if [ "$i_testcount" -le "$i_concurrency" ]; then
     i_copt=""
 fi
 
-$i_exe $i_copt  -n $i_testcount $i_url
+$i_exe -r -k $i_copt  -n $i_testcount $i_url

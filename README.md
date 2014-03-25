@@ -20,6 +20,8 @@ pan   soft   nofile   65535
 You can verify the change by : ulimit -a
 
 
+all tests are using keepalive feature
+
 Benchmark tools:
 ApacheBench (or ab), a command line program bundled with Apache HTTP Server
 Httperf, a command line program originally developed at HP Labs
