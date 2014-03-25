@@ -8,7 +8,7 @@ Just getting started....
 Installing nginx
 You may want to compile nginx to use local directories, configure it like this (you need to download pcre and zlib source code)
 
-./configure --prefix=/home/pan/nginx  --pid-path=/home/pan/nginx/logs/nginx.pid --lock-path==/home/pan/nginx/logs/nginx.lock --with-pcre=/home/pan/Downloads/pcre-8.34 --with-zlib=/home/pan/Downloads/zlib-1.2.8
+./configure --prefix=/home/pan/nginx --pid-path=/home/pan/nginx/logs/nginx.pid --lock-path==/home/pan/nginx/logs/nginx.lock --with-pcre=/home/pan/Downloads/pcre-8.34 --with-zlib=/home/pan/Downloads/zlib-1.2.8
 
 
 You may also need to change the max files a process can open, in ubuntu, it is adding two lines in  /etc/security/limits.conf, like this
