@@ -8,9 +8,12 @@ var dir = process.argv[3];
 
 http.createServer(function(req, res) {
     var uri = url.parse(req.url).pathname;
+    if (uri === '/' || uri === '' || uri == null) {
+        uri = '/index.html'
+    }
     var filename = path.join(dir, unescape(uri));
     res.writeHead(200, {
-                'Content-Type': 'audio/example'
+                'Content-Type': 'text/html'
             });
     fs.createReadStream(filename)
                         .pipe(res);
