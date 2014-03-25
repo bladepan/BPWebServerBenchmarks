@@ -2,6 +2,8 @@
 staticfiles
 logs
 
+go/bin/gowebserver
+
 nginx/conf/nginx.conf
 
 nginx/conf/nginx.conf-e

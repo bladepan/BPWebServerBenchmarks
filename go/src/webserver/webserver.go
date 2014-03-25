@@ -1,4 +1,3 @@
-//need to put this thing into a folder to properly run go install
 package main
 
 import (

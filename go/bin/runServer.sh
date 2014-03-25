@@ -7,8 +7,9 @@ source $i_baseDir/../bin/parameter.sh
 cd $i_baseDir
 
 if [[ "X$i_workers" != "X" ]]; then
+    echo "setting GOMAXPROCS to $i_workers"
     export GOMAXPROCS=$i_workers
 fi
 
-# Pass the '-s' flag to the linker to omit the debug information (for example, go build -ldflags "-s" prog.go).
-go run -ldflags "-s" src/webserver.go $i_portnum $i_staticdir
+$i_baseDir/go/gowebserver
+
